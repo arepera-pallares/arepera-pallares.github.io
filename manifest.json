@@ -1,0 +1,72 @@
+{
+  "name": "Arepera Los Pallares - Arepas Venezolanas",
+  "short_name": "Los Pallares",
+  "description": "Deliciosas arepas venezolanas auténticas en Cruces, Bilbao y Barakaldo. Sabor tradicional del País Vasco.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#205E78",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "es",
+  "dir": "ltr",
+  "categories": ["food", "restaurant", "business"],
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/maskable_icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/images/logo-icon.jpg",
+      "sizes": "180x180",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Ver ubicación Cruces",
+      "short_name": "Cruces",
+      "description": "Información y ubicación de nuestra arepera en Cruces",
+      "url": "/cruces.html",
+      "icons": [{ "src": "/icons/icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Ver ubicación Bilbao",
+      "short_name": "Bilbao", 
+      "description": "Información y ubicación de nuestra arepera en Bilbao",
+      "url": "/bilbao.html",
+      "icons": [{ "src": "/icons/icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Ver ubicación Barakaldo",
+      "short_name": "Barakaldo",
+      "description": "Información y ubicación de nuestra arepera en Barakaldo", 
+      "url": "/barakaldo.html",
+      "icons": [{ "src": "/icons/icon-192x192.png", "sizes": "192x192" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/assets/images/arepa-hero.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "platform": "wide",
+      "label": "Deliciosas arepas venezolanas"
+    }
+  ]
+} 

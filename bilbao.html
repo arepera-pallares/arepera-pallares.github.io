@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arepera Los Pallares Bilbao - Ubicación y Horarios</title>
+    
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#205E78">
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+    <link rel="icon" href="/assets/images/logo-icon.jpg">
+    
+    <!-- Critical CSS -->
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Oswald', Arial, sans-serif;
+            height: 100%;
+            background-color: #f5f5f5;
+        }
+        
+        /* Header and Navigation */
+        .header-container {
+            background: linear-gradient(135deg, #205E78, #2980b9);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .logo-container {
+            margin-bottom: 1rem;
+        }
+        
+        .logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin: 0.5rem 0;
+            font-weight: 600;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+        
+        /* Navigation */
+        .nav-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem;
+            border-radius: 25px;
+            margin: 1rem auto;
+            max-width: 600px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .nav-item a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 15px;
+            transition: background-color 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .nav-item a:hover, .nav-item a.active {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Main Content */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        .location-hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .hero-image {
+            width: 100%;
+            max-width: 600px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+        
+        .location-title {
+            font-size: 2.5rem;
+            color: #205E78;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .location-description {
+            font-size: 1.3rem;
+            color: #333;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        /* Info Cards Grid */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .info-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .info-card h3 {
+            font-size: 1.5rem;
+            color: #205E78;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .info-card .icon {
+            font-size: 1.8rem;
+        }
+        
+        .info-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-button {
+            background: linear-gradient(135deg, #205E78, #2980b9);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+        
+        .contact-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(32, 94, 120, 0.3);
+        }
+        
+        /* Footer */
+        .footer {
+            background: #205E78;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .location-title {
+                font-size: 2rem;
+            }
+            
+            .nav-menu {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero-image {
+                height: 250px;
+            }
+            
+            .main-content {
+                padding: 1rem;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-container">
+        <div class="logo-container">
+            <img src="/assets/images/logo-icon.jpg" alt="Arepera Los Pallares Logo" class="logo">
+        </div>
+        <h1>Arepera Los Pallares</h1>
+        <p class="subtitle">Bilbao - Deliciosas arepas venezolanas</p>
+        
+        <!-- Navigation -->
+        <nav class="nav-container">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="/">Inicio</a></li>
+                <li class="nav-item"><a href="/cruces.html">Cruces</a></li>
+                <li class="nav-item"><a href="/bilbao.html" class="active">Bilbao</a></li>
+                <li class="nav-item"><a href="/barakaldo.html">Barakaldo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Location Hero -->
+        <section class="location-hero">
+            <img src="/assets/images/arepa-hero.jpg" alt="Arepera Los Pallares Bilbao" class="hero-image">
+            <h2 class="location-title">🏙️ Bilbao</h2>
+            <p class="location-description">
+                Disfruta de nuestras deliciosas arepas venezolanas hechas con ingredientes frescos y recetas tradicionales. 
+                Un sabor auténtico que te transportará directo a Venezuela.
+            </p>
+        </section>
+
+        <!-- Information Grid -->
+        <section class="info-grid">
+            <!-- Address & Contact -->
+            <div class="info-card">
+                <h3><span class="icon">📍</span> Dirección</h3>
+                <p><strong>Arepera Los Pallares</strong></p>
+                <p>Centro de Bilbao</p>
+                <p>País Vasco, España</p>
+                <a href="https://maps.app.goo.gl/8LhR4dKNQjFFp8dV6" target="_blank" class="contact-button">
+                    Ver en Google Maps
+                </a>
+                <a href="https://www.google.com/maps/place/Arepera+los+Pallares+2/@43.260048,-2.939308,16z/data=!3m1!5s0xd4e5029b0a65e53:0xc7b4fdf92fc8dc7f!4m17!1m8!3m7!1s0xd4e5029b7662bf9:0xbd602ac3808a1b91!2sAlameda+de+San+Mamés,+43+bis,+Abando,+48010+Bilbao,+Vizcaya,+España!3b1!8m2!3d43.2598649!4d-2.9390461!16s%2Fg%2F11rg61g5tl!3m7!1s0xd4e511d02b8b5fb:0xc524be4b5032f2d4!8m2!3d43.2598942!4d-2.9391087!9m1!1b1!16s%2Fg%2F11fpjfjmzm?hl=es-419&entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="contact-button" style="background: linear-gradient(135deg, #28a745, #20c997); margin-left: 0.5rem;">
+                    ⭐ Deja tu Reseña
+                </a>
+            </div>
+
+            <!-- Hours -->
+            <div class="info-card">
+                <h3><span class="icon">🕐</span> Horarios</h3>
+                <p><strong>Lunes a Viernes:</strong> 11:00 - 22:00</p>
+                <p><strong>Sábados:</strong> 12:00 - 23:00</p>
+                <p><strong>Domingos:</strong> 12:00 - 21:00</p>
+                <p><em>Horarios pueden variar en días festivos</em></p>
+            </div>
+
+            <!-- Contact -->
+            <div class="info-card">
+                <h3><span class="icon">📞</span> Contacto</h3>
+                <p><strong>Teléfono:</strong> +34 XXX XXX XXX</p>
+                <p><strong>WhatsApp:</strong> +34 XXX XXX XXX</p>
+                <p><strong>Email:</strong> bilbao@areperalospallares.com</p>
+                <a href="tel:+34XXXXXXXXX" class="contact-button">
+                    Llamar Ahora
+                </a>
+            </div>
+
+            <!-- Specialties -->
+            <div class="info-card">
+                <h3><span class="icon">🫓</span> Especialidades</h3>
+                <p><strong>• Reina Pepiada</strong> - Pollo y aguacate</p>
+                <p><strong>• Carne Mechada</strong> - Carne deshebrada tradicional</p>
+                <p><strong>• Pabellón</strong> - Carne, caraotas y tajadas</p>
+                <p><strong>• Dominó</strong> - Caraotas negras y queso</p>
+                <p><strong>• Pelúa</strong> - Carne mechada y queso amarillo</p>
+            </div>
+
+            <!-- Services -->
+            <div class="info-card">
+                <h3><span class="icon">✨</span> Servicios</h3>
+                <p><strong>• Comida para llevar</strong></p>
+                <p><strong>• Pedidos por teléfono</strong></p>
+                <p><strong>• Ambiente familiar</strong></p>
+                <p><strong>• WiFi gratuito</strong></p>
+                <p><strong>• Pagos con tarjeta</strong></p>
+            </div>
+
+            <!-- About -->
+            <div class="info-card">
+                <h3><span class="icon">🇻🇪</span> Sobre Nosotros</h3>
+                <p>Somos una arepera venezolana que mantiene la tradición culinaria de nuestro país.</p>
+                <p>Cada arepa está hecha con amor y los mejores ingredientes frescos.</p>
+                <p><em>¡Ven y descubre el auténtico sabor de Venezuela!</em></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Arepera Los Pallares. Todos los derechos reservados.</p>
+        <p>Sabor venezolano auténtico en el País Vasco</p>
+    </footer>
+
+    <!-- Service Worker Registration -->
+    <script>
+        // Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                        console.log('Service Worker registered successfully:', registration);
+                    })
+                    .catch(error => {
+                        console.error('Service Worker registration failed:', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html> 
