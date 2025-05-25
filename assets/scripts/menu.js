@@ -98,9 +98,28 @@ class MenuManager {
             'nuts': 'Contiene Frutos Secos'
         };
 
-        const allergensHtml = item.allergens && item.allergens.length > 0 
+        // Handle both old format and new column-based format
+        let itemData;
+        if (item.columns) {
+            // New format with columns
+            const leftColumn = item.columns[0];
+            const rightColumn = item.columns[1];
+            
+            itemData = {
+                name: leftColumn.rows.find(row => row.name)?.name || '',
+                description: leftColumn.rows.find(row => row.description)?.description || '',
+                allergens: leftColumn.rows.find(row => row.allergens)?.allergens || [],
+                vegetarian: leftColumn.rows.find(row => row.vegetarian)?.vegetarian || false,
+                price: parseFloat(rightColumn.price) || 0
+            };
+        } else {
+            // Old format (direct properties)
+            itemData = item;
+        }
+
+        const allergensHtml = itemData.allergens && itemData.allergens.length > 0 
             ? `<div class="allergens">
-                ${item.allergens.map(allergen => 
+                ${itemData.allergens.map(allergen => 
                     `<span class="allergen-icon" title="${allergenLabels[allergen] || allergen}">
                         ${allergenIcons[allergen] || '⚠️'}
                     </span>`
@@ -108,19 +127,19 @@ class MenuManager {
                </div>`
             : '';
 
-        const vegetarianIcon = item.vegetarian ? '<span class="vegetarian-icon" title="Opción Vegetariana">🌱</span>' : '';
+        const vegetarianIcon = itemData.vegetarian ? '<span class="vegetarian-icon" title="Opción Vegetariana">🌱</span>' : '';
 
         return `
             <div class="menu-item">
-                <div class="item-header">
-                    <h3 class="item-name">${item.name}</h3>
-                    <span class="item-price">${item.price.toFixed(2)}€</span>
+                <div class="item-content">
+                    <h3 class="item-name">${itemData.name}</h3>
+                    <p class="item-description">${itemData.description}</p>
+                    <div class="item-tags">
+                        ${vegetarianIcon}
+                        ${allergensHtml}
+                    </div>
                 </div>
-                <p class="item-description">${item.description}</p>
-                <div class="item-tags">
-                    ${vegetarianIcon}
-                    ${allergensHtml}
-                </div>
+                <span class="item-price">${itemData.price.toFixed(2)}€</span>
             </div>
         `;
     }

@@ -21,90 +21,94 @@
         .main-content {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem 1rem;
+            padding: 1.5rem 1rem;
         }
         
         .location-hero {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
         
         .hero-image {
             width: 100%;
             max-width: 600px;
-            height: 300px;
+            height: 280px;
             object-fit: cover;
-            border-radius: 15px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            margin-bottom: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.25rem;
         }
         
         .location-title {
-            font-size: 2.5rem;
+            font-size: 2.25rem;
             color: #205E78;
             margin-bottom: 1rem;
             font-weight: 600;
+            line-height: 1.2;
         }
         
         .location-description {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             color: #333;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto 2rem;
+            line-height: 1.5;
+            max-width: 750px;
+            margin: 0 auto 1.5rem;
         }
         
         /* Info Cards Grid */
         .info-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
         }
         
         .info-card {
             background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease;
         }
         
         .info-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-3px);
         }
         
         .info-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: #205E78;
-            margin-bottom: 1rem;
+            margin-bottom: 0.875rem;
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            line-height: 1.3;
         }
         
         .info-card .icon {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
         }
         
         .info-card p {
             color: #666;
-            line-height: 1.6;
+            line-height: 1.4;
             margin-bottom: 0.5rem;
+            font-size: 0.95rem;
         }
         
         .contact-button {
             background: linear-gradient(135deg, #205E78, #2980b9);
             color: white;
             border: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: 25px;
+            padding: 0.75rem 1.25rem;
+            border-radius: 22px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
-            margin-top: 1rem;
+            margin-top: 0.875rem;
+            font-size: 0.95rem;
         }
         
         .contact-button:hover {
@@ -114,20 +118,36 @@
         
         /* Mobile Responsive */
         @media (max-width: 768px) {
+            .main-content {
+                padding: 1rem 0.75rem;
+            }
+            
+            .location-hero {
+                margin-bottom: 1.5rem;
+            }
+            
             .location-title {
-                font-size: 2rem;
+                font-size: 1.9rem;
             }
             
             .hero-image {
-                height: 250px;
+                height: 240px;
+                margin-bottom: 1rem;
             }
             
-            .main-content {
-                padding: 1rem;
+            .location-description {
+                font-size: 1.1rem;
+                margin-bottom: 1.25rem;
             }
             
             .info-grid {
                 grid-template-columns: 1fr;
+                gap: 1.25rem;
+                margin: 1.5rem 0;
+            }
+            
+            .info-card {
+                padding: 1.25rem;
             }
         }
     </style>
@@ -203,33 +223,7 @@
                 </a>
             </div>
 
-            <!-- Specialties -->
-            <div class="info-card">
-                <h3><span class="icon">🫓</span> Especialidades</h3>
-                <p><strong>• Reina Pepiada</strong> - Pollo y aguacate</p>
-                <p><strong>• Carne Mechada</strong> - Carne deshebrada tradicional</p>
-                <p><strong>• Pabellón</strong> - Carne, caraotas y tajadas</p>
-                <p><strong>• Dominó</strong> - Caraotas negras y queso</p>
-                <p><strong>• Pelúa</strong> - Carne mechada y queso amarillo</p>
-            </div>
 
-            <!-- Services -->
-            <div class="info-card">
-                <h3><span class="icon">✨</span> Servicios</h3>
-                <p><strong>• Comida para llevar</strong></p>
-                <p><strong>• Pedidos por teléfono</strong></p>
-                <p><strong>• Ambiente familiar</strong></p>
-                <p><strong>• WiFi gratuito</strong></p>
-                <p><strong>• Pagos con tarjeta</strong></p>
-            </div>
-
-            <!-- About -->
-            <div class="info-card">
-                <h3><span class="icon">🇻🇪</span> Sobre Nosotros</h3>
-                <p>Somos una arepera venezolana que mantiene la tradición culinaria de nuestro país.</p>
-                <p>Cada arepa está hecha con amor y los mejores ingredientes frescos.</p>
-                <p><em>¡Ven y descubre el auténtico sabor de Venezuela!</em></p>
-            </div>
         </section>
 
         <!-- Menu Section -->
