@@ -1,0 +1,8 @@
+<svg width="80" height="80" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="40" cy="40" rx="35" ry="15" fill="#deb887" stroke="#8b7355" stroke-width="2"/>
+  <ellipse cx="40" cy="35" rx="30" ry="4" fill="#dc143c"/>
+  <rect x="15" y="38" width="50" height="2" fill="#ffd700"/>
+  <rect x="15" y="41" width="50" height="2" fill="#90EE90"/>
+  <rect x="15" y="44" width="50" height="2" fill="#fff"/>
+  <text x="40" y="72" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#8b4513">Perro Ca...</text>
+</svg>

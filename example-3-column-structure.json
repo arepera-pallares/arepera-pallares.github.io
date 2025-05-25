@@ -1,0 +1,20 @@
+{
+  "menu-item": {
+    "columns": [
+      {
+        "product-photo": "assets/images/products/catira.svg"
+      },
+      {
+        "rows": [
+          { "name": "Catira" },
+          { "description": "Pollo mechado y queso" },
+          { "allergens": ["gluten", "dairy"] },
+          { "vegetarian": false }
+        ]
+      },
+      {
+        "price": "7.20"
+      }
+    ]
+  }
+} 

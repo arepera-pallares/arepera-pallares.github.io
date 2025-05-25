@@ -101,20 +101,25 @@ class MenuManager {
         // Handle both old format and new column-based format
         let itemData;
         if (item.columns) {
-            // New format with columns
-            const leftColumn = item.columns[0];
-            const rightColumn = item.columns[1];
+            // New format with columns (3-column: photo, content, price)
+            const photoColumn = item.columns[0];
+            const contentColumn = item.columns[1];
+            const priceColumn = item.columns[2];
             
             itemData = {
-                name: leftColumn.rows.find(row => row.name)?.name || '',
-                description: leftColumn.rows.find(row => row.description)?.description || '',
-                allergens: leftColumn.rows.find(row => row.allergens)?.allergens || [],
-                vegetarian: leftColumn.rows.find(row => row.vegetarian)?.vegetarian || false,
-                price: parseFloat(rightColumn.price) || 0
+                photo: photoColumn['product-photo'] || '',
+                name: contentColumn.rows.find(row => row.name)?.name || '',
+                description: contentColumn.rows.find(row => row.description)?.description || '',
+                allergens: contentColumn.rows.find(row => row.allergens)?.allergens || [],
+                vegetarian: contentColumn.rows.find(row => row.vegetarian)?.vegetarian || false,
+                price: parseFloat(priceColumn.price) || 0
             };
         } else {
-            // Old format (direct properties)
-            itemData = item;
+            // Old format (direct properties) - generate photo path from item id
+            itemData = {
+                ...item,
+                photo: item.id ? `assets/images/products/${item.id}.svg` : ''
+            };
         }
 
         const allergensHtml = itemData.allergens && itemData.allergens.length > 0 
@@ -131,6 +136,7 @@ class MenuManager {
 
         return `
             <div class="menu-item">
+                <img src="${itemData.photo}" alt="${itemData.name}" class="item-photo" loading="lazy" onerror="this.src='assets/images/products/placeholder.svg'">
                 <div class="item-content">
                     <h3 class="item-name">${itemData.name}</h3>
                     <p class="item-description">${itemData.description}</p>

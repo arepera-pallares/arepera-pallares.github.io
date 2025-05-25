@@ -164,7 +164,7 @@
     margin-bottom: 0;
 }
 
-/* Item Layout - Two Column */
+/* Item Layout - Two Column (Photo Hidden) */
 .menu-item {
     background: #fff;
     border: 1px solid #e9ecef;
@@ -177,6 +177,21 @@
     grid-template-columns: 1fr auto;
     gap: 1rem;
     align-items: start;
+}
+
+.item-photo {
+    display: none; /* Hidden until better photos are available */
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.item-photo:hover {
+    border-color: #205E78;
+    transform: scale(1.05);
 }
 
 .item-content {
@@ -490,6 +505,12 @@
         padding: 1rem;
         grid-template-columns: 1fr auto;
         gap: 0.75rem;
+    }
+    
+    .item-photo {
+        display: none; /* Hidden on mobile too */
+        width: 60px;
+        height: 60px;
     }
     
     .item-content {
