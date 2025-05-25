@@ -1,0 +1,539 @@
+{
+  "menu": {
+    "location": "cruces",
+    "locationName": "Cruces",
+    "sections": [
+      {
+        "id": "arepas",
+        "name": "Arepas",
+        "description": "Arepas venezolanas tradicionales hechas con harina de maíz blanco",
+        "items": [
+          {
+            "id": "la-viuda",
+            "name": "La Viuda",
+            "description": "Arepa sola",
+            "price": 2.00,
+            "allergens": ["gluten"],
+            "vegetarian": true
+          },
+          {
+            "id": "catira",
+            "name": "Catira",
+            "description": "Pollo mechado y queso",
+            "price": 7.20,
+            "allergens": ["dairy"],
+            "vegetarian": false
+          },
+          {
+            "id": "la-nina",
+            "name": "La Niña",
+            "description": "Jamón y queso",
+            "price": 6.50,
+            "allergens": ["dairy"],
+            "vegetarian": false
+          },
+          {
+            "id": "domino",
+            "name": "Dominó",
+            "description": "Frijoles negros y queso",
+            "price": 6.40,
+            "allergens": ["dairy"],
+            "vegetarian": true
+          },
+          {
+            "id": "reina-pepiada",
+            "name": "Reina Pepiada",
+            "description": "Pollo, aguacate y mayonesa",
+            "price": 8.50,
+            "allergens": ["eggs"],
+            "vegetarian": false
+          },
+          {
+            "id": "perico",
+            "name": "Perico",
+            "description": "Cebolla, tomate y huevo revuelto",
+            "price": 7.00,
+            "allergens": ["eggs"],
+            "vegetarian": true
+          },
+          {
+            "id": "la-carajita",
+            "name": "La Carajita",
+            "description": "Salchicha con huevo revuelto",
+            "price": 6.60,
+            "allergens": ["eggs"],
+            "vegetarian": false
+          },
+          {
+            "id": "la-burgues",
+            "name": "La Burgués",
+            "description": "Carne picada y queso",
+            "price": 7.30,
+            "allergens": ["dairy"],
+            "vegetarian": false
+          },
+          {
+            "id": "burda-de-buena",
+            "name": "Burda de Buena",
+            "description": "Huevo revuelto y bacón",
+            "price": 7.00,
+            "allergens": ["eggs"],
+            "vegetarian": false
+          },
+          {
+            "id": "la-pelua",
+            "name": "La Pelúa",
+            "description": "Carne mechada y queso",
+            "price": 8.30,
+            "allergens": ["dairy"],
+            "vegetarian": false
+          },
+          {
+            "id": "sifrina",
+            "name": "Sifrina",
+            "description": "Pollo mechado guacamole y queso",
+            "price": 7.80,
+            "allergens": ["dairy"],
+            "vegetarian": false
+          },
+          {
+            "id": "bachaquera",
+            "name": "Bachaquera",
+            "description": "Pollo mechado, queso y bacón",
+            "price": 7.50,
+            "allergens": ["dairy"],
+            "vegetarian": false
+          },
+          {
+            "id": "la-chonchita",
+            "name": "La Chonchita",
+            "description": "Pernil de cochino y queso",
+            "price": 7.10,
+            "allergens": ["dairy"],
+            "vegetarian": false
+          },
+          {
+            "id": "sifrino",
+            "name": "Sifrino",
+            "description": "Carne mechada, guacamole y queso",
+            "price": 9.00,
+            "allergens": ["dairy"],
+            "vegetarian": false
+          },
+          {
+            "id": "mixta",
+            "name": "Mixta",
+            "description": "Carne y pollo mechado",
+            "price": 8.70,
+            "allergens": [],
+            "vegetarian": false
+          },
+          {
+            "id": "olguiviris",
+            "name": "Olguiviris",
+            "description": "Aguacate y pechuga a la plancha",
+            "price": 8.50,
+            "allergens": [],
+            "vegetarian": false
+          },
+          {
+            "id": "colombiana-xl",
+            "name": "Colombiana XL",
+            "description": "Pernil de cochino, pollo, carne mechada, bacón, queso costeño y guacamole",
+            "price": 13.00,
+            "allergens": ["dairy"],
+            "vegetarian": false
+          },
+          {
+            "id": "cuatriboliada",
+            "name": "Cuatriboliada",
+            "description": "Pernil de cochino, pollo mechado, tajadas, guacamole y queso",
+            "price": 9.00,
+            "allergens": ["dairy"],
+            "vegetarian": false
+          },
+          {
+            "id": "guarimbera",
+            "name": "Guarimbera",
+            "description": "Bonito, tomate, cebolla, cilantro y mayonesa",
+            "price": 8.50,
+            "allergens": ["eggs"],
+            "vegetarian": false
+          },
+          {
+            "id": "la-cojonuda",
+            "name": "La Cojonuda",
+            "description": "Queso latino fundido, pollo, bacón y guacamole",
+            "price": 9.00,
+            "allergens": ["dairy"],
+            "vegetarian": false
+          },
+          {
+            "id": "la-guayanesa",
+            "name": "La Guayanesa",
+            "description": "Queso guayanés",
+            "price": 8.50,
+            "allergens": ["dairy"],
+            "vegetarian": true
+          },
+          {
+            "id": "pabellon",
+            "name": "Pabellón",
+            "description": "Carne mechada, tajadas, frijoles negros y queso",
+            "price": 9.00,
+            "allergens": ["dairy", "eggs"],
+            "vegetarian": false
+          },
+          {
+            "id": "franciscaner",
+            "name": "Franciscaner",
+            "description": "Chicharrón con aguacate",
+            "price": 8.80,
+            "allergens": [],
+            "vegetarian": false
+          },
+          {
+            "id": "la-vegana",
+            "name": "La Vegana",
+            "description": "Lechuga, tomate, cebolla, maíz, calabacín a la plancha, alubias negras y tajadas",
+            "price": 8.50,
+            "allergens": [],
+            "vegetarian": true
+          },
+          {
+            "id": "la-campesina",
+            "name": "La Campesina",
+            "description": "Queso guayanés y tajadas",
+            "price": 8.50,
+            "allergens": ["dairy"],
+            "vegetarian": true
+          },
+          {
+            "id": "la-vascolatina-xl",
+            "name": "La Vascolatina XL",
+            "description": "Entrecot, guasacaca, queso blanco costeño",
+            "price": 17.50,
+            "allergens": ["dairy"],
+            "vegetarian": false
+          },
+          {
+            "id": "vegetariana",
+            "name": "Vegetariana",
+            "description": "Lechuga, cebolla, queso guayanés, aguacate, tomate",
+            "price": 8.70,
+            "allergens": ["dairy"],
+            "vegetarian": true
+          },
+          {
+            "id": "super-nina-xl",
+            "name": "Super Niña XL",
+            "description": "Jamón, queso rallado, bacón y pollo",
+            "price": 12.50,
+            "allergens": ["dairy"],
+            "vegetarian": false
+          },
+          {
+            "id": "la-cartelua",
+            "name": "La Cartelua",
+            "description": "Pernil de cochino, pollo, carne mechada, bacón, tajadas, queso y guacamole",
+            "price": 13.50,
+            "allergens": ["dairy"],
+            "vegetarian": false
+          },
+          {
+            "id": "la-pallarita",
+            "name": "La Pallarita",
+            "description": "Pernil de cochino, pollo / carne mechada, bacón, guacamole, queso guayanés y tajadas",
+            "price": 15.00,
+            "allergens": ["dairy"],
+            "vegetarian": false
+          }
+        ]
+      },
+      {
+        "id": "hamburguesas",
+        "name": "Hamburguesas",
+        "description": "Hamburguesas artesanales con ingredientes frescos",
+        "items": [
+          {
+            "id": "mechicarne",
+            "name": "MechiCarne",
+            "description": "Carne mechada, lechuga, tomate, jamón, queso en su pan especial y sus 3 salsas",
+            "price": 12.50,
+            "allergens": ["gluten", "dairy", "eggs"],
+            "vegetarian": false
+          },
+          {
+            "id": "mechipollo",
+            "name": "MechiPollo",
+            "description": "Pollo mechado, lechuga, tomate, jamón, queso en su pan especial y sus 3 salsas",
+            "price": 11.80,
+            "allergens": ["gluten", "dairy", "eggs"],
+            "vegetarian": false
+          },
+          {
+            "id": "mixta-hamburguesa",
+            "name": "Mixta",
+            "description": "Carne / pollo mechado, lechuga, tomate, jamón, queso en su pan especial y sus 3 salsas",
+            "price": 12.50,
+            "allergens": ["gluten", "dairy", "eggs"],
+            "vegetarian": false
+          },
+          {
+            "id": "de-la-casa",
+            "name": "De La Casa",
+            "description": "Chuleta ahumada, carne / pollo mechado, lechuga, tomate, jamón, queso en su pan especial y sus 3 salsas",
+            "price": 16.00,
+            "allergens": ["gluten", "dairy", "eggs"],
+            "vegetarian": false
+          }
+        ]
+      },
+      {
+        "id": "hot-dogs",
+        "name": "Hot Dogs",
+        "description": "Perros calientes al estilo venezolano",
+        "items": [
+          {
+            "id": "perro-normal",
+            "name": "Perro Normal",
+            "description": "Salchicha, cebolla crispy, papitas paja salsa y queso",
+            "price": 6.70,
+            "allergens": ["gluten", "dairy"],
+            "vegetarian": false
+          },
+          {
+            "id": "perro-pollo",
+            "name": "Perro Pollo",
+            "description": "Pollo mechado, salchicha, cebolla crispy, papitas paja salsa y queso",
+            "price": 8.00,
+            "allergens": ["gluten", "dairy"],
+            "vegetarian": false
+          },
+          {
+            "id": "perro-carne",
+            "name": "Perro Carne",
+            "description": "Carne mechada, salchicha, cebolla crispy, papitas paja salsa y queso",
+            "price": 8.50,
+            "allergens": ["gluten", "dairy"],
+            "vegetarian": false
+          },
+          {
+            "id": "perro-especial",
+            "name": "Perro Especial",
+            "description": "Carne / pollo mechado, lonchas de bacón, salchicha, cebolla crispy, papitas paja salsa y queso",
+            "price": 9.80,
+            "allergens": ["gluten", "dairy"],
+            "vegetarian": false
+          }
+        ]
+      },
+      {
+        "id": "platos-especiales",
+        "name": "Platos Especiales",
+        "description": "Platos principales tradicionales venezolanos",
+        "items": [
+          {
+            "id": "contra-muslo-pollo",
+            "name": "Contra Muslo de Pollo",
+            "description": "Bañado en queso fundido, arroz, ensalada y yuca frita",
+            "price": 15.00,
+            "allergens": ["dairy"],
+            "vegetarian": false
+          },
+          {
+            "id": "bandeja-paisa",
+            "name": "Bandeja Paisa",
+            "description": "Chicharrón, chorizo, arroz, carne molida, huevo, alubias rojas, tostón, ensalada y arepitas",
+            "price": 21.00,
+            "allergens": ["eggs", "gluten"],
+            "vegetarian": false
+          },
+          {
+            "id": "pabellon-plato",
+            "name": "Pabellón",
+            "description": "Carne mechada, arroz, alubias negras, huevos, tajadas y queso blanco",
+            "price": 15.00,
+            "allergens": ["dairy", "eggs"],
+            "vegetarian": false
+          },
+          {
+            "id": "costillas-barbacoa",
+            "name": "Costillas a la Barbacoa",
+            "description": "Con patatas y ensalada primavera",
+            "price": 17.00,
+            "allergens": [],
+            "vegetarian": false
+          },
+          {
+            "id": "codillo",
+            "name": "Codillo",
+            "description": "Arroz, ensalada y papas fritas",
+            "price": 16.50,
+            "allergens": [],
+            "vegetarian": false
+          },
+          {
+            "id": "ensalada-tricolor",
+            "name": "Ensalada Tricolor",
+            "description": "Base de lechuga, tomate, aguacate, cebolla y maíz con láminas de pollo a la plancha y un toque reducción de Módena",
+            "price": 14.00,
+            "allergens": [],
+            "vegetarian": false
+          },
+          {
+            "id": "pechuga-ajillo",
+            "name": "Pechuga al Ajillo",
+            "description": "Pechuga de pollo, arroz, ensalada y papas fritas",
+            "price": 15.00,
+            "allergens": [],
+            "vegetarian": false
+          },
+          {
+            "id": "chuleta",
+            "name": "Chuleta",
+            "description": "Dos chuletas ahumadas de cerdo, arroz, ensalada y yuca frita",
+            "price": 16.00,
+            "allergens": [],
+            "vegetarian": false
+          },
+          {
+            "id": "entrecot",
+            "name": "Entrecot",
+            "description": "Carne de ternera en plancha a su punto de cocción, arroz, huevo frito y patatas",
+            "price": 18.00,
+            "allergens": ["eggs"],
+            "vegetarian": false
+          }
+        ]
+      },
+      {
+        "id": "plato-peques",
+        "name": "Plato de los Peques",
+        "description": "Menú especial para niños",
+        "items": [
+          {
+            "id": "nuggets",
+            "name": "Nuggets",
+            "description": "6 unidades de nuggets acompañado con patatas y huevo frito",
+            "price": 9.80,
+            "allergens": ["gluten", "eggs"],
+            "vegetarian": false
+          },
+          {
+            "id": "salchijunior",
+            "name": "SalchiJunior",
+            "description": "2 unidades de salchichas acompañado con patatas y huevo frito",
+            "price": 9.80,
+            "allergens": ["eggs"],
+            "vegetarian": false
+          }
+        ]
+      },
+      {
+        "id": "raciones-calientes",
+        "name": "Raciones Calientes",
+        "description": "Acompañamientos y raciones para compartir",
+        "items": [
+          {
+            "id": "racion-tostones",
+            "name": "Ración de Tostones",
+            "description": "Plátano verde frito",
+            "price": 8.80,
+            "allergens": [],
+            "vegetarian": true
+          },
+          {
+            "id": "racion-yuca-frita",
+            "name": "Ración de Yuca Frita",
+            "description": "Yuca frita tradicional",
+            "price": 8.00,
+            "allergens": [],
+            "vegetarian": true
+          },
+          {
+            "id": "racion-salchipapas",
+            "name": "Ración Salchipapas",
+            "description": "Salchichas con papas fritas",
+            "price": 8.50,
+            "allergens": [],
+            "vegetarian": false
+          },
+          {
+            "id": "racion-salchipapas-casa",
+            "name": "Ración Salchipapas de la Casa",
+            "description": "Salchipapas especiales de la casa",
+            "price": 15.00,
+            "allergens": [],
+            "vegetarian": false
+          },
+          {
+            "id": "racion-alitas-picantes",
+            "name": "Ración Alitas Picantes",
+            "description": "Alitas de pollo picantes",
+            "price": 8.00,
+            "allergens": [],
+            "vegetarian": false
+          },
+          {
+            "id": "racion-tequeños",
+            "name": "Ración de Tequeños (6 Uni)",
+            "description": "6 tequeños tradicionales",
+            "price": 8.00,
+            "allergens": ["dairy", "gluten"],
+            "vegetarian": true
+          },
+          {
+            "id": "racion-aguacate",
+            "name": "Ración de Aguacate",
+            "description": "Aguacate fresco",
+            "price": 7.50,
+            "allergens": [],
+            "vegetarian": true
+          },
+          {
+            "id": "racion-patatas-fritas",
+            "name": "Ración Patatas Fritas",
+            "description": "Patatas fritas tradicionales",
+            "price": 6.50,
+            "allergens": [],
+            "vegetarian": true
+          },
+          {
+            "id": "racion-papitas-amarillas",
+            "name": "Ración Papitas Amarillas Colombianas",
+            "description": "Papitas amarillas estilo colombiano",
+            "price": 8.50,
+            "allergens": [],
+            "vegetarian": true
+          },
+          {
+            "id": "racion-tajadas-queso",
+            "name": "Ración Tajadas con Queso",
+            "description": "Plátano maduro frito con queso",
+            "price": 9.50,
+            "allergens": ["dairy"],
+            "vegetarian": true
+          },
+          {
+            "id": "nachosllares",
+            "name": "Nachosllares",
+            "description": "Nacho, pico de gallo, guacamole, nata agria, queso fundido, carne picada y toque de la casa",
+            "price": 15.50,
+            "allergens": ["dairy"],
+            "vegetarian": false
+          }
+        ]
+      }
+    ],
+    "allergens": {
+      "gluten": "Contiene gluten",
+      "dairy": "Contiene lácteos",
+      "eggs": "Contiene huevos",
+      "nuts": "Contiene frutos secos"
+    },
+    "currency": "EUR",
+    "tax_included": true,
+    "last_updated": "2024-01-15"
+  }
+} 

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'arepera-pallares-v1';
+const CACHE_NAME = 'arepera-pallares-v4';
 const urlsToCache = [
     '/',
     '/index.html',
@@ -6,6 +6,19 @@ const urlsToCache = [
     '/bilbao.html',
     '/barakaldo.html',
     '/manifest.json',
+    '/service-worker.js',
+    // CSS Files
+    '/assets/styles/header.css',
+    '/assets/styles/menu.css',
+    // JavaScript Files
+    '/assets/scripts/menu.js',
+    '/assets/scripts/menu-component.js',
+    '/assets/scripts/pwa.js',
+    // Menu Data Files
+    '/assets/data/menu-cruces.json',
+    '/assets/data/menu-bilbao.json',
+    '/assets/data/menu-barakaldo.json',
+    // Images
     '/assets/images/arepa-hero.jpg',
     '/assets/images/logo-icon.jpg',
     '/assets/images/arepa-gallery-1.jpg',
@@ -13,10 +26,14 @@ const urlsToCache = [
     '/assets/images/cruces-gallery.jpg',
     '/assets/images/bilbao-hero.jpg',
     '/assets/images/bilbao-gallery.jpg',
+    // Icons
     '/icons/icon-192x192.png',
     '/icons/icon-512x512.png',
     '/icons/maskable_icon.png',
-    '/icons/apple-touch-icon.png'
+    '/icons/apple-touch-icon.png',
+    '/icons/favicon-32x32.png',
+    '/icons/favicon-16x16.png',
+    '/icons/favicon.ico'
 ];
 
 // Install event - cache all resources
