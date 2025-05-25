@@ -1,0 +1,111 @@
+---
+description: 
+globs: manifest.json
+alwaysApply: false
+---
+# Web App Manifest Patterns for Restaurant PWA
+
+When creating or editing manifest.json files for this multi-location restaurant PWA:
+
+## Required Display Configuration
+- Use `"display": "standalone"` for full app-like experience
+- Set `"orientation": "portrait-primary"` for mobile-optimized experience
+- Include proper scope and start_url for GitHub Pages deployment
+
+## Complete Icon Configuration
+Include all required icon sizes and purposes for comprehensive PWA support:
+```json
+"icons": [
+  {
+    "src": "/icons/icon-192x192.png",
+    "sizes": "192x192",
+    "type": "image/png",
+    "purpose": "any"
+  },
+  {
+    "src": "/icons/icon-512x512.png",
+    "sizes": "512x512",
+    "type": "image/png",
+    "purpose": "any"
+  },
+  {
+    "src": "/icons/maskable_icon.png",
+    "sizes": "192x192",
+    "type": "image/png",
+    "purpose": "maskable"
+  },
+  {
+    "src": "/icons/apple-touch-icon.png",
+    "sizes": "180x180",
+    "type": "image/png",
+    "purpose": "any"
+  }
+]
+```
+
+## App Shortcuts for Multi-Location Access
+Implement shortcuts for quick access to each restaurant location:
+```json
+"shortcuts": [
+  {
+    "name": "Ver ubicación Cruces",
+    "short_name": "Cruces",
+    "description": "Información y ubicación de nuestra arepera en Cruces",
+    "url": "/cruces.html",
+    "icons": [{ "src": "/icons/icon-192x192.png", "sizes": "192x192" }]
+  },
+  {
+    "name": "Ver ubicación Bilbao",
+    "short_name": "Bilbao",
+    "description": "Información y ubicación de nuestra arepera en Bilbao", 
+    "url": "/bilbao.html",
+    "icons": [{ "src": "/icons/icon-192x192.png", "sizes": "192x192" }]
+  }
+]
+```
+
+## Restaurant-Specific Metadata
+- Set appropriate categories: `["food", "restaurant", "business"]`
+- Use restaurant branding colors for theme_color and background_color
+- Include proper language and direction settings: `"lang": "es", "dir": "ltr"`
+- Add descriptive screenshots for app store listings
+
+## GitHub Pages Compatibility
+- Use absolute paths starting with "/" for all resources
+- Set `"start_url": "/"` for proper deployment
+- Ensure `"scope": "/"` covers all app pages
+
+## Required Core Fields
+```json
+{
+  "name": "Full Restaurant Name - Descriptive Tagline",
+  "short_name": "Short Brand Name",
+  "description": "Compelling description mentioning cuisine type and locations",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#205E78", // Brand primary color
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "es", // Primary language
+  "dir": "ltr",
+  "categories": ["food", "restaurant", "business"]
+}
+```
+
+## Enhanced Features
+- **Screenshots**: Include representative app screenshots for better app store presentation
+- **Related Applications**: Reference native apps if they exist
+- **Prefer Related Applications**: Set to false to prioritize PWA installation
+
+## Validation Requirements
+- Ensure all icon files exist and are properly sized
+- Validate all URLs are accessible and use correct paths
+- Test shortcuts work correctly on supported platforms
+- Verify theme colors match brand guidelines
+
+## Performance Considerations
+- Keep manifest file size minimal (under 2KB recommended)
+- Use optimized icon formats (PNG for compatibility)
+- Ensure fast loading of referenced icon files
+- Test manifest parsing across different browsers and platforms

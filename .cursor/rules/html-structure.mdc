@@ -1,0 +1,174 @@
+---
+description: 
+globs: *.html
+alwaysApply: false
+---
+# HTML Structure Patterns for Restaurant PWA
+
+When creating or editing HTML files for this restaurant PWA:
+
+## Document Structure
+Use consistent document structure across all pages:
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Title - Arepera Los Pallares</title>
+    
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#205E78">
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+    <link rel="icon" href="/assets/images/logo-icon.jpg">
+    
+    <!-- Shared Header Styles -->
+    <link rel="stylesheet" href="/assets/styles/header.css">
+    
+    <!-- Page Specific CSS -->
+    <style>
+        /* Page-specific styles here */
+    </style>
+</head>
+```
+
+## Required PWA Meta Tags
+Include these meta tags on every page:
+- `<link rel="manifest" href="/manifest.json">`
+- `<meta name="theme-color" content="#205E78">`
+- `<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">`
+- `<link rel="icon" href="/assets/images/logo-icon.jpg">`
+
+## Header Navigation Structure
+Use consistent header structure across all pages:
+```html
+<header class="header-nav">
+    <div class="nav-container">
+        <div class="logo-section">
+            <img src="/assets/images/logo-icon.jpg" alt="Arepera Los Pallares Logo" class="logo">
+            <div class="brand-text">
+                <h1>Arepera Los Pallares</h1>
+                <p>Sabor venezolano auténtico</p>
+            </div>
+        </div>
+        
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/" class="back-btn">← Inicio</a></li>
+                <li><a href="/cruces.html" class="active">Cruces</a></li>
+                <li><a href="/bilbao.html">Bilbao</a></li>
+                <li><a href="/barakaldo.html">Barakaldo</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+```
+
+## Main Content Structure
+Use semantic HTML5 elements for content organization:
+```html
+<main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <img src="/assets/images/hero.jpg" alt="Descriptive alt text" class="hero-image">
+        <h2 class="section-title">Page Title</h2>
+        <p class="hero-text">Descriptive content</p>
+    </section>
+
+    <!-- Content Sections -->
+    <section class="content-section">
+        <h3>Section Title</h3>
+        <!-- Section content -->
+    </section>
+</main>
+```
+
+## Card Grid Patterns
+Use consistent grid structures for content cards:
+```html
+<section class="locations-section">
+    <h2 class="section-title">Section Title</h2>
+    <div class="locations-grid">
+        <article class="location-card">
+            <img src="/assets/images/image.jpg" alt="Descriptive alt" class="location-image">
+            <div class="location-info">
+                <h3 class="location-name">Card Title</h3>
+                <p class="location-address">Card description</p>
+                <button class="location-button">Action Button</button>
+            </div>
+        </article>
+    </div>
+</section>
+```
+
+## Footer Structure
+Include consistent footer on all pages:
+```html
+<footer class="footer">
+    <p>&copy; 2024 Arepera Los Pallares. Todos los derechos reservados.</p>
+    <p>Sabor venezolano auténtico en el País Vasco</p>
+</footer>
+```
+
+## Script Loading Pattern
+Load scripts at the end of the body:
+```html
+<body>
+    <!-- Page content -->
+    
+    <!-- Scripts -->
+    <script src="/assets/scripts/pwa.js"></script>
+    <script src="/assets/scripts/menu-component.js"></script>
+    <script>
+        // Page-specific JavaScript
+    </script>
+</body>
+```
+
+## Accessibility Requirements
+- Use semantic HTML5 elements (`header`, `nav`, `main`, `section`, `article`, `footer`)
+- Include proper heading hierarchy (h1 → h2 → h3)
+- Provide descriptive alt text for all images
+- Use proper form labels and ARIA attributes when needed
+- Ensure keyboard navigation works for all interactive elements
+
+## Image Optimization
+- Use descriptive alt text for all images
+- Include loading="lazy" for images below the fold
+- Provide fallback images with onerror handlers
+- Use appropriate image formats (WebP with fallbacks when possible)
+
+## Language and Localization
+- Set `lang="es"` on the html element
+- Use Spanish content throughout
+- Include proper character encoding (`<meta charset="utf-8">`)
+- Use appropriate currency formatting (€ symbol)
+
+## Performance Considerations
+- Place critical CSS inline in `<style>` tags
+- Load non-critical CSS files asynchronously when possible
+- Use absolute paths for all resources (`/assets/...`)
+- Minimize DOM depth and complexity
+
+## Menu Component Integration
+For pages with menus, include the menu container:
+```html
+<section class="menu-section">
+    <div id="location-menu-container"></div>
+</section>
+
+<script>
+    // Initialize menu component
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuComponent = new LocationMenuComponent('location-menu-container', 'location-name');
+        menuComponent.init();
+    });
+</script>
+```
+
+## Error Handling
+- Include graceful fallbacks for missing images
+- Provide meaningful error messages for failed content loads
+- Ensure pages work without JavaScript (progressive enhancement)
+- Include proper 404 handling for missing resources

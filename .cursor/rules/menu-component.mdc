@@ -1,0 +1,111 @@
+---
+description: related to the Menu component
+globs: 
+alwaysApply: false
+---
+# Menu Component Patterns for Restaurant PWA
+
+When creating or editing menu-related components and functionality:
+
+## Component Architecture
+- Use ES6 classes for reusable menu components
+- Implement location-specific menu loading from JSON data
+- Support dynamic filtering and categorization
+- Ensure components are self-contained and reusable
+
+## Menu Data Structure
+Menu JSON files should follow this structure:
+```json
+{
+  "menu": {
+    "location": "location-id",
+    "locationName": "Display Name",
+    "sections": [
+      {
+        "id": "section-id",
+        "name": "Section Display Name",
+        "description": "Section description",
+        "items": [
+          {
+            "id": "item-id",
+            "name": "Item Name",
+            "description": "Item description",
+            "price": 0.00,
+            "allergens": ["gluten", "dairy", "eggs", "nuts"],
+            "vegetarian": true/false
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+## Component Class Structure
+```javascript
+class LocationMenuComponent {
+    constructor(containerId, location) {
+        this.containerId = containerId;
+        this.location = location;
+        this.menuData = null;
+        this.currentSection = 'default-section';
+        this.currentFilter = 'all';
+    }
+
+    async init() {
+        await this.loadMenuData();
+        this.renderMenuComponent();
+        this.setupEventListeners();
+    }
+}
+```
+
+## Required Methods
+- **loadMenuData()**: Async method to fetch location-specific JSON data
+- **renderMenuComponent()**: Generate complete menu HTML structure
+- **renderSectionNav()**: Create section navigation buttons
+- **renderCurrentSection()**: Display current section with applied filters
+- **renderMenuItem()**: Generate individual menu item HTML
+- **setupEventListeners()**: Handle section switching and filtering
+- **switchSection()**: Change active menu section
+- **applyFilter()**: Apply dietary/allergen filters
+- **filterItems()**: Filter menu items based on criteria
+
+## Filtering System
+Support these filter types:
+- **all**: Show all items
+- **vegetarian**: Show only vegetarian options
+- **no-gluten**: Hide items containing gluten
+- **no-dairy**: Hide items containing dairy
+- **no-eggs**: Hide items containing eggs
+- **no-nuts**: Hide items containing nuts
+
+## Error Handling
+- Implement graceful fallbacks for failed JSON requests
+- Show user-friendly error messages
+- Provide fallback content when no items match filters
+- Handle missing images with placeholder fallbacks
+
+## Accessibility Features
+- Use semantic HTML structure (nav, section, article)
+- Include proper ARIA labels for interactive elements
+- Ensure keyboard navigation works for all controls
+- Provide screen reader friendly content descriptions
+
+## Performance Optimization
+- Use lazy loading for menu item images
+- Implement efficient DOM updates (avoid full re-renders)
+- Cache loaded menu data to prevent redundant requests
+- Use event delegation for better performance with many items
+
+## Responsive Design
+- Mobile-first approach for menu layouts
+- Touch-friendly filter buttons and navigation
+- Optimized spacing and typography for small screens
+- Collapsible sections for better mobile experience
+
+## Integration Guidelines
+- Components should work independently on any page
+- Use consistent CSS class naming conventions
+- Ensure components don't conflict with global styles
+- Support multiple instances on the same page if needed

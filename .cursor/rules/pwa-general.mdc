@@ -1,0 +1,61 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# PWA Shell for Restaurant Multi-Location App
+
+This project creates a Progressive Web App (PWA) for a multi-location restaurant using extracted Google Sites content, making it fully installable as a standalone app with complete offline capability. The solution is hosted on GitHub Pages with comprehensive content caching.
+
+## Current Architecture
+- **Source Code Extraction**: Uses cleaned HTML/CSS/assets from Google Sites (no iframe embedding)
+- **Multi-Location Support**: Separate pages for each restaurant location
+- **Dynamic Menu System**: JSON-driven menus with filtering and categorization
+- **Component-Based**: Reusable JavaScript components for consistent functionality
+- **Full Offline Capability**: All content cached - works completely offline after first load
+
+## Core Technologies
+- HTML5 (semantic structure, no iframe)
+- Vanilla JavaScript ES6+ (Classes, Modules, Service Workers)
+- JSON (Web App Manifest, Menu Data)
+- CSS3 (Grid, Flexbox, Custom Properties, responsive design)
+
+## Key Features
+- **Complete Offline Functionality**: Content AND shell work offline
+- **Dynamic Menu Components**: Location-specific menus with filtering
+- **Responsive Design**: Mobile-first approach with touch-friendly interfaces
+- **PWA Installation**: Full app-like experience on all devices
+- **Multi-Location Navigation**: Seamless navigation between restaurant locations
+
+## Project Structure
+```
+/
+├── index.html              # Main landing page
+├── [location].html         # Location-specific pages (cruces.html, bilbao.html, etc.)
+├── manifest.json           # PWA configuration
+├── service-worker.js       # Comprehensive offline caching
+├── assets/
+│   ├── styles/            # Shared CSS components
+│   ├── scripts/           # JavaScript modules and components
+│   ├── data/              # JSON menu data per location
+│   └── images/            # Optimized images and assets
+└── icons/                 # PWA icons (all required sizes)
+```
+
+## Code Generation Principles
+- **Modern JavaScript**: Use ES6+ features (const/let, arrow functions, classes, async/await)
+- **Component Architecture**: Reusable classes for common functionality
+- **Modular CSS**: Shared styles in separate files, page-specific styles inline
+- **Data-Driven**: JSON-based content for easy maintenance
+- **Performance First**: Lazy loading, optimized images, efficient caching
+- **Accessibility**: Semantic HTML, proper ARIA labels, keyboard navigation
+- **Mobile-First**: Responsive design with touch-friendly interfaces
+- **Static Hosting Compatible**: Works with GitHub Pages (no build process)
+
+## Development Guidelines
+- Keep components self-contained and reusable
+- Use descriptive class names and clear variable naming
+- Include comprehensive error handling for network requests
+- Implement progressive enhancement (works without JavaScript)
+- Add inline comments for complex PWA-specific behavior
+- Maintain consistent styling patterns across all pages

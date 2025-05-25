@@ -1,0 +1,113 @@
+---
+description: 
+globs: service-worker.js
+alwaysApply: false
+---
+# Service Worker Patterns for Multi-Location Restaurant PWA
+
+When creating or editing service worker files for this restaurant PWA:
+
+## Comprehensive Cache Strategy
+- Cache ALL application resources for complete offline functionality
+- Use cache-first strategy with network fallback for optimal performance
+- Include versioned cache names for easy updates and cache management
+- Implement proper error handling and fallback responses
+
+## Required Cache Files
+```javascript
+const urlsToCache = [
+    // Core HTML pages
+    '/',
+    '/index.html',
+    '/cruces.html',
+    '/bilbao.html', 
+    '/barakaldo.html',
+    
+    // PWA configuration
+    '/manifest.json',
+    '/service-worker.js',
+    
+    // CSS Files (shared styles)
+    '/assets/styles/header.css',
+    '/assets/styles/menu.css',
+    
+    // JavaScript Components
+    '/assets/scripts/menu.js',
+    '/assets/scripts/menu-component.js',
+    '/assets/scripts/pwa.js',
+    
+    // Menu Data (location-specific JSON)
+    '/assets/data/menu-cruces.json',
+    '/assets/data/menu-bilbao.json',
+    '/assets/data/menu-barakaldo.json',
+    
+    // Images and Assets
+    '/assets/images/arepa-hero.jpg',
+    '/assets/images/logo-icon.jpg',
+    // ... other images
+    
+    // PWA Icons (all required sizes)
+    '/icons/icon-192x192.png',
+    '/icons/icon-512x512.png',
+    '/icons/maskable_icon.png',
+    '/icons/apple-touch-icon.png',
+    '/icons/favicon-32x32.png',
+    '/icons/favicon-16x16.png',
+    '/icons/favicon.ico'
+];
+```
+
+## Cache Versioning Strategy
+Use descriptive versioned cache names for easy management:
+```javascript
+const CACHE_NAME = 'arepera-pallares-v4'; // Increment for updates
+```
+
+## Required Event Listeners
+
+### 1. Install Event
+- Cache all resources during service worker installation
+- Use `skipWaiting()` for immediate activation
+- Include comprehensive error handling
+
+### 2. Activate Event  
+- Clean up old cache versions
+- Use `clients.claim()` to take control immediately
+- Log cache management operations
+
+### 3. Fetch Event
+- Handle navigation requests with fallback to index.html
+- Serve cached resources with network fallback
+- Cache new resources dynamically when fetched
+- Provide graceful fallbacks for failed requests
+
+## Advanced Features
+- **Navigation Handling**: Proper SPA-like navigation for location pages
+- **Dynamic Caching**: Cache new resources as they're requested
+- **Fallback Responses**: Provide meaningful fallbacks for offline scenarios
+- **Background Sync**: Placeholder for future features (form submissions, etc.)
+- **Push Notifications**: Placeholder for future marketing features
+
+## Error Handling Patterns
+```javascript
+// Graceful image fallbacks
+if (event.request.destination === 'image') {
+    return new Response('', {
+        status: 200,
+        statusText: 'OK',
+        headers: { 'Content-Type': 'image/svg+xml' }
+    });
+}
+```
+
+## Performance Considerations
+- Skip non-GET requests to avoid unnecessary processing
+- Clone responses before caching to prevent consumption
+- Use proper response validation before caching
+- Implement efficient cache matching strategies
+
+## Debugging and Monitoring
+- Include comprehensive console logging for development
+- Log cache operations for troubleshooting
+- Track service worker lifecycle events
+- Monitor fetch event handling for performance optimization
